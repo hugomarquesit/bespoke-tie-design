@@ -108,7 +108,7 @@ const ContactSection = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="mt-2 border-muted focus:border-accent"
+                      className="mt-2 h-12 border-2 border-muted focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 rounded-lg"
                       placeholder="Seu nome completo"
                     />
                   </div>
@@ -124,7 +124,7 @@ const ContactSection = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="mt-2 border-muted focus:border-accent"
+                      className="mt-2 h-12 border-2 border-muted focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 rounded-lg"
                       placeholder="seu@email.com"
                     />
                   </div>
@@ -138,7 +138,7 @@ const ContactSection = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      className="mt-2 min-h-[120px] border-muted focus:border-accent"
+                      className="mt-2 min-h-[130px] border-2 border-muted focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 rounded-lg resize-none"
                       placeholder="Conte-nos sobre sua visão: cores preferidas, ocasião de uso, estilo desejado, ou qualquer detalhe especial que deseja incluir..."
                     />
                   </div>
@@ -147,11 +147,14 @@ const ContactSection = () => {
                     type="submit" 
                     variant="gold" 
                     size="lg" 
-                    className="w-full font-serif"
+                    className="w-full font-serif shadow-lg hover:shadow-xl"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      "Enviando..."
+                      <>
+                        <div className="w-5 h-5 mr-2 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                        Enviando...
+                      </>
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />

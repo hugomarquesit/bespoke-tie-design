@@ -166,4 +166,30 @@ All colors MUST be HSL for elegant, sophisticated branding.
   .transition-luxury {
     transition: var(--transition-luxury);
   }
+
+  /* Enhanced Focus Styles */
+  .focus-ring {
+    @apply focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-200;
+  }
+
+  /* Smooth Hover Effects */
+  .hover-lift {
+    @apply transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
+  }
+
+  /* Button Enhancement */
+  .btn-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-shine:hover::before {
+    left: 100%;
+  }
 }

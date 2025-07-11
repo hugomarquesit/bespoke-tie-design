@@ -21,7 +21,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section id="process" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">

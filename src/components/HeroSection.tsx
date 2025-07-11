@@ -7,6 +7,11 @@ const HeroSection = () => {
     contactSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToProcess = () => {
+    const processSection = document.getElementById('process');
+    processSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -30,20 +35,21 @@ const HeroSection = () => {
             Confeccionadas com os mais nobres tecidos, cada gravata é uma obra de arte personalizada para o homem que valoriza a distinção.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start animate-fade-in-up">
             <Button 
               onClick={scrollToContact}
               variant="gold" 
               size="xl" 
-              className="font-serif text-lg tracking-wide"
+              className="font-serif text-lg tracking-wide shadow-2xl"
             >
               Solicite Sua Peça Exclusiva
             </Button>
             
             <Button 
-              variant="outline" 
+              onClick={scrollToProcess}
+              variant="ghost_outline" 
               size="xl" 
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-serif"
+              className="font-serif text-lg tracking-wide"
             >
               Conheça o Processo
             </Button>
