@@ -1,6 +1,19 @@
+import { useState } from "react";
 import tiesGallery from "@/assets/ties-gallery.jpg";
+import Lightbox from "@/components/Lightbox";
 
 const GallerySection = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const galleryImages = [
+    {
+      src: tiesGallery,
+      alt: "Coleção de gravatas personalizadas de luxo",
+      title: "Coleção Principal",
+      description: "Nossa seleção de gravatas artesanais em sedas nobres"
+    }
+  ];
+
   const tieStyles = [
     {
       title: "Clássica Navy",
@@ -28,8 +41,25 @@ const GallerySection = () => {
     }
   ];
 
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+
   return (
-    <section className="py-20 bg-background">
+    <section id="gallery" className="py-20 bg-background">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 animate-fade-in">
@@ -42,13 +72,19 @@ const GallerySection = () => {
 
         {/* Main Gallery Image */}
         <div className="mb-12 animate-scale-in">
-          <div className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-5xl mx-auto group cursor-pointer">
             <img 
               src={tiesGallery} 
               alt="Coleção de gravatas personalizadas de luxo"
-              className="w-full h-auto rounded-lg shadow-luxury"
+              className="w-full h-auto rounded-lg shadow-luxury transition-all duration-500 group-hover:shadow-2xl group-hover:scale-[1.02]"
+              onClick={() => openLightbox(0)}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-lg"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-lg group-hover:from-primary/20 transition-all duration-300"></div>
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div className="bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 text-primary font-semibold shadow-lg">
+                Clique para ampliar
+              </div>
+            </div>
           </div>
         </div>
 
@@ -82,6 +118,15 @@ const GallerySection = () => {
           <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full"></div>
         </div>
       </div>
+
+      <Lightbox
+        images={galleryImages}
+        isOpen={lightboxOpen}
+        currentIndex={currentImageIndex}
+        onClose={closeLightbox}
+        onNext={nextImage}
+        onPrev={prevImage}
+      />
     </section>
   );
 };
