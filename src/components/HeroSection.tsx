@@ -26,13 +26,14 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center lg:text-left">
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in-up">
-            A Essência da Elegância.
+            A Essência da Elegância, Estilo e Credibilidade
             <br />
-            <span className="text-accent">Sua Gravata. Seu Estilo.</span>
+            <span className="text-accent">Gravata, Lenço e Echarpe Artesanais Personalizados.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl animate-fade-in-up font-light leading-relaxed">
-            Confeccionadas com os mais nobres tecidos, cada gravata é uma obra de arte personalizada para o homem que valoriza a distinção.
+            <span className="block mb-4 font-medium">Para quem valoriza Distinção.</span>
+            Confeccionadas com os mais nobres tecidos, cada Gravata, Lenço e Echarpe é uma Obra de Arte Artezanal Única. Somos especialistas em elevar sua Elegância, Estilo e Credibilidade, através de Gravatas, Lenços e Echarpes Personalizadas, confeccionadas de maneira artesanal, feitas a mão, o que garante Autenticidade, Excelente Padrão de Acabamento e Qualidade Única.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start animate-fade-in-up">
