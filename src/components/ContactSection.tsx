@@ -65,7 +65,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Email</p>
-                    <p className="text-muted-foreground">contato@gravatasrequinte.com.br</p>
+                    <p className="text-muted-foreground">edilsongravatas@gmail.com</p>
                   </div>
                 </div>
 
@@ -75,7 +75,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Telefone</p>
-                    <p className="text-muted-foreground">(11) 99999-9999</p>
+                    <p className="text-muted-foreground">(21) 99153-7037</p>
                   </div>
                 </div>
               </div>

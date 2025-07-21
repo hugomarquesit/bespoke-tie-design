@@ -10,10 +10,10 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-serif text-2xl font-bold mb-6">
-              Gravatas de Requinte
+              Tricolluzy Rio Confecções
             </h3>
             <p className="text-primary-foreground/80 leading-relaxed mb-6">
-              Criando gravatas personalizadas de luxo há mais de 15 anos. 
+              A quase quatro décadas elevando sua Elegância e Credibilidade. 
               Cada peça é uma obra de arte única, confeccionada com os mais 
               finos materiais e atenção excepcional aos detalhes.
             </p>
@@ -29,19 +29,19 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
                 <span className="text-primary-foreground/80">
-                  contato@gravatasrequinte.com.br
+                  edilsongravatas@gmail.com
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent" />
                 <span className="text-primary-foreground/80">
-                  (11) 99999-9999
+                  (21) 99153-7037
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
                 <span className="text-primary-foreground/80">
-                  São Paulo, SP - Brasil
+                  Rua Valdemar Fidalgo, 281 - Senador Camará, RJ - CEP 21.831-445
                 </span>
               </div>
             </div>
@@ -87,7 +87,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © {currentYear} Gravatas de Requinte. Todos os direitos reservados.
+            © {currentYear} Tricolluzy Rio Confecções Ltda. Todos os direitos reservados. CNPJ: 35.948.207/0001-77
           </p>
           <p className="text-primary-foreground/40 text-sm mt-2">
             Desenvolvido com elegância e sofisticação
